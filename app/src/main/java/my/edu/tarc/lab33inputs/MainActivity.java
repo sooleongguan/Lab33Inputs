@@ -49,7 +49,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+     public void resetValue(View view){
+        textViewPremium.setText("");
+        spinnerAge.setSelection(0);
 
+    }
 
     public void calculatePremium(View view){
         int position;
