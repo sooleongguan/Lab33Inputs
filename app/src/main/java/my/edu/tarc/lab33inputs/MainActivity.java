@@ -54,6 +54,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinnerAge.setSelection(0);
 
     }
+ 
+
+    public void resetField(View view){
+        checkBoxSmoker.setChecked(false);
+        textViewPremium.setText(" ");
+        radioGroupGender.clearCheck();
+
+    }
 
     public void calculatePremium(View view){
         int position;
@@ -155,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         Currency currency= Currency.getInstance(Locale.getDefault());
         String symbol = currency.getSymbol();
-        textViewPremium.setText( getString(R.string.premium)+ "="+ premium);
+        textViewPremium.setText(getString(R.string.premium)+" = RM" + premium);
     }
 
 }
